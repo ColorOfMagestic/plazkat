@@ -1,3 +1,13 @@
 .text {
-
+  &__size {
+    &-sm {
+      font-size: size(14);
+    }
+    &-lg {
+      font-size: size(16);
+      @include media(lg) {
+        font-size: size(18);
+      }
+    }
+  }
 }

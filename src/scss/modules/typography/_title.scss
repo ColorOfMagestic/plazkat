@@ -1,41 +1,43 @@
 .title {
-    --dp-block: block;
-    display: var(--dp-block);
-    font-weight: 700;
-    line-height: 1.15;
-    //color: #fff;
-    //font-family: $font;
-    //text-transform: uppercase;
-    word-wrap: break-word;
+  --dp-block: block;
+  display: var(--dp-block);
+  font-weight: 700;
+  //   line-height: 1.15;
+  //color: #fff;
+  font-family: $font-secondary;
+  //text-transform: uppercase;
+  word-wrap: break-word;
 
-    //? theme
-    //&--white {
-    //    color: #fff;
-    //}
+  //? theme
+  //&--white {
+  //    color: #fff;
+  //}
 
-    //* размеры
-    &--size {
-        &-sm {   
-            font-size: size(24);
-            @include media(lg) {
-                font-size: size(36);
-            }
-        }
-        &-md {   
-            font-size: size(24);
-            @include media(lg) {
-                font-size: size(56);
-            }
-        }
-        &-lg {   
-            font-size: size(24);
-            @include media(lg) {
-                font-size: size(72);
-            }
-        }
+  //* размеры
+  &--size {
+    &-sm {
+      font-size: size(20);
+      line-height: auto;
+      @include media(lg) {
+        font-size: size(25);
+      }
     }
-    //* стиль
+    &-md {
+      font-size: size(24);
+      line-height: 1.4;
+      @include media(lg) {
+        font-size: size(40);
+      }
+    }
+    &-lg {
+      font-size: size(32);
+      line-height: 1.1;
+      @include media(lg) {
+        font-size: size(64);
+      }
+    }
+  }
+  //* стиль
 }
-
 
 // font-feature-settings: 'pnum' on, 'lnum' on;
