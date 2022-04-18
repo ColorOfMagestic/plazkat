@@ -1,0 +1,82 @@
+.specialization {
+  padding: size(50) 0;
+  @include media(lg) {
+    padding: size(120) 0;
+  }
+  &__content {
+    margin-top: size(40);
+    @include media(lg) {
+      margin-top: size(70);
+    }
+    &-item {
+      display: flex;
+      flex-flow: column wrap;
+      &:not(:last-child) {
+        margin-bottom: size(30);
+      }
+      @include media(lg) {
+        flex-flow: row nowrap;
+        align-items: center;
+        &:not(:last-child) {
+          margin-bottom: size(60);
+        }
+      }
+      img {
+        flex-basis: 48%;
+      }
+      &__info {
+        &__title {
+          margin-top: size(15);
+          color: $grey-light;
+        }
+        &__subtitle {
+          margin-top: size(30);
+          margin-bottom: size(20);
+        }
+        ol,
+        ul {
+          padding-left: size(15);
+        }
+        ul {
+          list-style: disc;
+        }
+        &__buttons {
+          display: flex;
+          flex-direction: column;
+          margin-top: size(20);
+          @include media(lg) {
+            flex-direction: row;
+            margin-top: size(30);
+          }
+          .btn--link {
+            margin-left: 0;
+            margin-top: size(20);
+            @include media(lg) {
+              margin-top: size(0);
+              margin-left: size(20);
+            }
+          }
+        }
+
+        @include media(lg) {
+          margin-left: size(60);
+          &__title {
+            margin-top: size(0);
+          }
+        }
+      }
+    }
+    .reverse {
+      flex-direction: column;
+      @include media(lg) {
+        flex-direction: row-reverse;
+      }
+      &__info {
+        @include media(lg) {
+          margin-left: size(0);
+          margin-right: size(60);
+        }
+      }
+    }
+  }
+}
