@@ -2,5 +2,6 @@ app
 gulpfile.js
 node_modules
 .vscode
+src/PHPMailer
 src/*.bat
 src/*.txt
