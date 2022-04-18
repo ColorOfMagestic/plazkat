@@ -1,10 +1,427 @@
 .header {
+  background-image: url(../images/global/header_BG.jpg);
+  background-size: cover;
+  &__wrapper {
+    padding: size(10);
+    @include media(lg) {
+      padding: size(20);
+    }
+    background-color: $white;
 
-    &__container {
-        
+    .header__logo {
+      margin-right: auto;
+
+      img {
+        width: 50%;
+      }
+
+      @include media(lg) {
+        img {
+          width: 100%;
+        }
+
+        margin-right: size(238);
+      }
     }
 
-    &__mobile {
+    .header__contacts {
+      &-phone {
+        position: relative;
+        padding-left: size(30);
+        margin-right: size(99);
+        a {
+          color: inherit;
+          &::before {
+            position: absolute;
+            left: 30;
+            bottom: 0;
+            display: block;
+            content: "";
+            width: 0;
+            height: size(1);
+            background-color: $grey-dark;
+            transition: 0.4s linear;
+          }
+          &:hover {
+            &::before {
+              width: 80%;
+            }
+          }
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: size(5);
+          display: block;
+          content: url(../images/global/phone.svg);
+          width: size(20);
+          height: size(20);
+        }
+      }
+      &-select__wrapper {
+        position: relative;
+        padding-left: size(30);
 
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: size(5);
+
+          display: block;
+          content: url(../images/global/map-pin.svg);
+          width: size(20);
+          height: size(20);
+        }
+
+        .header__contacts-select {
+          position: relative;
+          display: flex;
+          min-width: 65px;
+          height: auto;
+          overflow: hidden;
+          &::before {
+            position: absolute;
+            left: size(12);
+            bottom: 0;
+            display: block;
+            content: "";
+            width: 70%;
+            height: size(1);
+            background-color: $green;
+          }
+          select {
+            appearance: none;
+            outline: 0;
+            border: 0;
+            box-shadow: none;
+            /* Personalize */
+            flex: 1;
+            padding: 0 size(10);
+            color: $green;
+            cursor: pointer;
+          }
+          select::-ms-expand {
+            display: none;
+          }
+        }
+      }
     }
+    .header__btn {
+      margin-left: auto;
+    }
+  }
+  &__nav__wrapper {
+    @include media(lg) {
+      padding: 0 size(19);
+    }
+    background-color: rgba($color: #071920, $alpha: 0.6);
+    .header_nav-list {
+      justify-content: space-between;
+
+      &_item {
+        position: relative;
+        padding: size(19) 0;
+        color: $white;
+        a {
+          color: currentColor;
+        }
+        &:hover {
+          cursor: pointer;
+          .header_nav-list_item-list_two {
+            display: block;
+          }
+          @include media(lg) {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          display: block;
+          content: "";
+          width: 0;
+          height: size(2);
+          background-color: $green;
+          transition: 0.8s;
+        }
+
+        &-list_two {
+          position: absolute;
+          display: none;
+          width: size(200);
+          background-color: $grey-light;
+          border-radius: 4px;
+          z-index: 2;
+          @include media(lg) {
+            top: size(60);
+            left: 0;
+          }
+          li {
+            position: relative;
+            padding: size(15);
+            color: $grey-dark;
+            &:not(:last-child) {
+              border-bottom: 1px solid $grey-dark;
+            }
+            &:hover {
+              border-radius: 4px;
+              background-color: $white;
+              .header_nav-list_item-list_three {
+                display: block;
+              }
+            }
+            .header_nav-list_item-list_three {
+              position: absolute;
+              display: none;
+              width: size(200);
+              background-color: $grey-light;
+              border-radius: 4px;
+              z-index: 2;
+
+              @include media(lg) {
+                top: 0;
+                left: 100%;
+              }
+              li {
+                padding: size(15);
+                color: $grey-dark;
+                &:not(:last-child) {
+                  border-bottom: 1px solid $grey-dark;
+                }
+                &:hover {
+                  border-radius: 4px;
+                  background-color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .arr {
+        &::after {
+          position: absolute;
+          right: size(-17);
+          bottom: size(20);
+          display: block;
+          content: url(../images/global/arr_d.svg);
+        }
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  .header_nav--mobile {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .header_nav--mobile {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding: size(15);
+      background-color: $grey-light;
+      transform: translateX(-110%);
+      transition: 0.8s linear;
+      &__header {
+        img {
+          width: 50%;
+        }
+        &-close {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          margin-left: auto;
+          span {
+            position: absolute;
+            display: block;
+            width: size(25);
+            height: size(2);
+            background-color: $grey-dark;
+            border-radius: 50px;
+            &:nth-of-type(1) {
+              transform: rotate(45deg);
+            }
+            &:nth-of-type(2) {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+
+      .header_nav-list {
+        width: 50%;
+        &_item {
+          position: relative;
+          padding: size(10) 0;
+          color: $grey-dark;
+          a {
+            color: currentColor;
+          }
+          &:hover {
+            cursor: pointer;
+            .header_nav-list_item-list_two {
+              display: block;
+            }
+          }
+
+          &-list_two {
+            position: absolute;
+            display: none;
+            width: 100%;
+            background-color: $white;
+            border: 1px solid $grey-dark;
+            border-radius: 4px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            li {
+              position: relative;
+              padding: size(10);
+              color: $grey-dark;
+              &:not(:last-child) {
+                border-bottom: 1px solid $grey-dark;
+              }
+              &:hover {
+                border-radius: 4px;
+                background-color: $grey-light;
+                .header_nav-list_item-list_three {
+                  display: block;
+                }
+              }
+              .header_nav-list_item-list_three {
+                position: absolute;
+                display: none;
+                width: 100%;
+                background-color: $white;
+                border: 1px solid $grey-dark;
+                border-radius: 4px;
+                top: 0;
+                left: 100%;
+                li {
+                  padding: size(10);
+                  color: $grey-dark;
+                  &:not(:last-child) {
+                    border-bottom: 1px solid $grey-dark;
+                  }
+                  &:hover {
+                    border-radius: 4px;
+                    background-color: $grey-light;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .header__contacts-phone {
+        position: relative;
+        padding-left: size(30);
+        margin-top: size(50);
+        a {
+          display: block;
+          width: 50%;
+          color: inherit;
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          display: block;
+          content: url(../images/global/phone.svg);
+          width: size(20);
+          height: size(20);
+        }
+      }
+      .header__contacts-select__wrapper {
+        position: relative;
+        padding-left: size(30);
+        margin-top: size(30);
+
+        &::before {
+          position: absolute;
+          left: 0;
+          display: block;
+          content: url(../images/global/map-pin.svg);
+          width: size(20);
+          height: size(20);
+        }
+
+        .header__contacts-select {
+          position: relative;
+          display: flex;
+          min-width: 65px;
+          height: auto;
+          overflow: hidden;
+          &::before {
+            position: absolute;
+            left: size(12);
+            bottom: 0;
+            display: block;
+            content: "";
+            width: 70%;
+            height: size(1);
+            background-color: $green;
+          }
+          select {
+            appearance: none;
+            outline: 0;
+            border: 0;
+            box-shadow: none;
+            /* Personalize */
+            flex: 1;
+            padding: 0 size(10);
+            color: $green;
+            cursor: pointer;
+          }
+          select::-ms-expand {
+            display: none;
+          }
+        }
+      }
+      .btn {
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+    .active {
+      transform: translateX(0);
+    }
+  }
+  &__intro {
+    color: $white;
+    padding-top: size(60);
+    padding-bottom: size(105);
+    text-align: center;
+    @include media(lg) {
+      text-align: left;
+
+      padding-top: size(185);
+      padding-bottom: size(325);
+    }
+    &__title {
+      position: relative;
+      &::before {
+        position: absolute;
+        left: size(-65);
+        top: size(-63);
+        display: block;
+        content: url(../images/global/border.png);
+      }
+    }
+    &__text {
+      margin-top: size(30);
+      @include media(lg) {
+        margin-top: size(40);
+      }
+    }
+  }
 }

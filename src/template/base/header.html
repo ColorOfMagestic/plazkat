@@ -1,6 +1,218 @@
 <header class="header">
-    <div class="header__container container">
-        <div class="header__logo logo"></div>
-        <button class="header__menu-toggle menu-toggle"><span class="menu-toggle__icon"></span></button>
+  <div class="header__wrapper">
+    <div class="header__container container box">
+      <div class="header__logo logo">
+        <img src="images/global/logo.svg" alt="" />
+      </div>
+      <div class="header__contacts box-center-y">
+        <div class="header__contacts-phone m:hide m:show@lg item">
+          <a href="tel:+3725550000">+372 555 000 00</a>
+        </div>
+        <div class="header__contacts-select__wrapper m:hide m:show@lg box">
+          <p class="header__contacts-select__text">Ваш регион:</p>
+          <div class="header__contacts-select">
+            <select>
+              <option value="Эстония">Эстония</option>
+              <option value="Венгрия">Венгрия</option>
+              <option value="Бельгия">Бельгия</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button
+        class="header__btn btn btn--primary btn--size-md item m:hide m:show@lg"
+      >
+        Задать вопрос
+      </button>
+      
+      <button class="header__menu-toggle menu-toggle item m:show@sm m:hide@lg ">
+        <span class="menu-toggle__icon"></span>
+      </button>
     </div>
+  </div>
+
+  <div class="header__nav__wrapper">
+    <div class="container">
+      <nav class="header_nav item m:hide m:show@lg">
+        <ul class="header_nav-list box">
+          <li class="header_nav-list_item">
+            <a href="/">Главная</a>
+          </li>
+          <li class="header_nav-list_item arr">
+            О компании
+            <ul class="header_nav-list_item-list_two">
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+              <li class="text__size-sm box-center">
+                Lorem ipsum
+                <ul class="header_nav-list_item-list_three">
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                </ul>
+              </li>
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+            </ul>
+          </li>
+          <li class="header_nav-list_item arr">
+            Решения
+            <ul class="header_nav-list_item-list_two">
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+              <li class="text__size-sm box-center">
+                Lorem ipsum
+                <ul class="header_nav-list_item-list_three">
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                </ul>
+              </li>
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+            </ul>
+          </li>
+          <li class="header_nav-list_item arr">
+            Сервис
+            <ul class="header_nav-list_item-list_two">
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+              <li class="text__size-sm box-center">
+                Lorem ipsum
+                <ul class="header_nav-list_item-list_three">
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                </ul>
+              </li>
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+            </ul>
+          </li>
+          <li class="header_nav-list_item arr">
+            Технологические решения
+            <ul class="header_nav-list_item-list_two">
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+              <li class="text__size-sm box-center">
+                Lorem ipsum
+                <ul class="header_nav-list_item-list_three">
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                </ul>
+              </li>
+              <li class="text__size-sm box-center">Lorem ipsum</li>
+            </ul>
+          </li>
+          <li class="header_nav-list_item">
+            <a href="#">Объекты</a>
+          </li>
+          <li class="header_nav-list_item">
+            <a href="#">Контакты</a>
+            </li>
+        </ul>
+      </nav>
+
+      <nav class="header_nav--mobile">
+        
+          <div class="header_nav--mobile__header box">
+              <img src="images/global/logo.svg" alt=""/>
+              <button class="header_nav--mobile__header-close box-center">
+                  <span></span>
+                  <span></span>
+              </button>
+          </div>
+          <ul class="header_nav-list box-y">
+            <li class="header_nav-list_item">
+              <a href="/">Главная</a>
+            </li>
+            <li class="header_nav-list_item">
+              О компании
+              <ul class="header_nav-list_item-list_two">
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+                <li class="text__size-sm box-center">
+                  Lorem ipsum
+                  <ul class="header_nav-list_item-list_three">
+                    <li class="text__size-sm box-center">Lorem</li>
+                    <li class="text__size-sm box-center">Lorem</li>
+                    <li class="text__size-sm box-center">Lorem</li>
+                  </ul>
+                </li>
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+              </ul>
+            </li>
+            <li class="header_nav-list_item">
+              Решения
+              <ul class="header_nav-list_item-list_two">
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+                <li class="text__size-sm box-center">
+                  Lorem ipsum
+                  <ul class="header_nav-list_item-list_three">
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  </ul>
+                </li>
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+              </ul>
+            </li>
+            <li class="header_nav-list_item">
+              Сервис
+              <ul class="header_nav-list_item-list_two">
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+                <li class="text__size-sm box-center">
+                  Lorem ipsum
+                  <ul class="header_nav-list_item-list_three">
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  </ul>
+                </li>
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+              </ul>
+            </li>
+            <li class="header_nav-list_item">
+              Технологические решения
+              <ul class="header_nav-list_item-list_two">
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+                <li class="text__size-sm box-center">
+                  Lorem ipsum
+                  <ul class="header_nav-list_item-list_three">
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                    <li class="text__size-sm box-center">Lorem, ipsum dolor.</li>
+                  </ul>
+                </li>
+                <li class="text__size-sm box-center">Lorem ipsum</li>
+              </ul>
+            </li>
+            <li class="header_nav-list_item">Объекты</li>
+            <li class="header_nav-list_item">Контакты</li>
+          </ul>
+          <div class="header__contacts-phone">
+              <a href="tel:+3725550000">+372 555 000 00</a>
+            </div>
+            <div class="header__contacts-select__wrapper box">
+              <p class="header__contacts-select__text">Ваш регион:</p>
+              <div class="header__contacts-select">
+                <select>
+                  <option value="Эстония">Эстония</option>
+                  <option value="Венгрия">Венгрия</option>
+                  <option value="Бельгия">Бельгия</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn--primary btn--size-md">
+              Задать вопрос
+            </button>
+    </nav>
+    </div>
+    </div>
+  </div>
+
+  <div class="header__intro">
+    <div class="container">
+      <h1 class="header__intro__title title title--size-lg">
+        Системы очистки на различных производственных процессах
+      </h1>
+      <p class="header__intro__text text__size-lg">
+        Гарантируем эффективность очистки не менее 95%,<br />
+        есть возможность провести пилотные испытания на Вашем предприятии
+      </p>
+    </div>
+  </div>
 </header>

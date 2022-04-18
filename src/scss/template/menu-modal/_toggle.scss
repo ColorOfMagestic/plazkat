@@ -1,19 +1,19 @@
 //* Размеры иконки
-$menu-toggle-width: 40;
-$menu-toggle-height: 40;
+$menu-toggle-width: 30;
+$menu-toggle-height: 30;
 //* Толщина линий
-$menu-toggle-icon-line-height:4;
+$menu-toggle-icon-line-height:3;
 //* Ширина
-$menu-toggle-icon-top-width: 40;
-$menu-toggle-icon-center-width: 32;
-$menu-toggle-icon-bottom-width: 24;
+$menu-toggle-icon-top-width: 32;
+$menu-toggle-icon-center-width: 24;
+$menu-toggle-icon-bottom-width: 16;
 //* Направление линий
 $menu-toggle-icon-direction: 'right';
 //*
-$menu-toggle-icon-indent: 6;
+$menu-toggle-icon-indent: 4;
 
 .menu-toggle {
-	//background-color: $bg-dark;
+	// background-color: $grey-dark;
 	position: relative;
 	--dp-flex: flex;
 	display: var(--dp-flex);
