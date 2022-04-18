@@ -14,10 +14,12 @@
     &:hover {
       background: $white;
       color: $green;
+      outline: 1px solid $green;
     }
   }
   &:active {
     background: $white;
     color: $green;
+    outline: 1px solid $green;
   }
 }

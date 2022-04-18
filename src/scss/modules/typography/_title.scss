@@ -1,7 +1,7 @@
 .title {
   --dp-block: block;
   display: var(--dp-block);
-  font-weight: 700;
+  // font-weight: 700;
   //   line-height: 1.15;
   //color: #fff;
   font-family: $font-secondary;
@@ -30,8 +30,9 @@
       }
     }
     &-lg {
-      font-size: size(32);
+      font-size: size(30);
       line-height: 1.1;
+      font-weight: 500;
       @include media(lg) {
         font-size: size(64);
       }
