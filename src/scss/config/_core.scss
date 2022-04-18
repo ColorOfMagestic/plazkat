@@ -1,25 +1,25 @@
 //*
-$font-primary: "", sans-serif;
-$font-secondary: "", sans-serif;
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Oswald", sans-serif;
 //* Размеры шрифта
-$font-size:(
-    'default':  size(14),
-    'lg':       size(18),
+$font-size: (
+  "default": size(14),
+  "lg": size(16),
 );
 //* Глобальные настройки (body)
-$global-settings:(
-    'font': $font-primary,
-    'line-height': 1.35,
-    'font-weight': 400,
-    'color': #000,
-    'bg': null
+$global-settings: (
+  "font": $font-primary,
+  "line-height": 1.4,
+  "font-weight": 400,
+  "color": #212121,
+  "bg": null,
 );
 
-//* базавая настройка скорости анимаций 
-$td: 400ms; 
+//* базавая настройка скорости анимаций
+$td: 400ms;
 
 //* Размеры макета (дизайн макета):
-$layout-size: 1920;
+$layout-size: 1600;
 //* Требуется для работы функции size-clamp, rem
 //* src\scss\core\functions\_size.scss
 //* src\scss\layout\_root.scss
