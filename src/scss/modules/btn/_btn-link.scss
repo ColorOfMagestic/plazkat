@@ -1,0 +1,22 @@
+.btn--link {
+  --dp-flex: flex;
+  display: var(--dp-flex);
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border: 1px solid $green;
+  border-radius: 4px;
+  background: $white;
+  color: $green;
+  .icon {
+    color: $green;
+  }
+  @media (pointer: fine) {
+    &:hover {
+      // background: $btn-bg-hover;
+    }
+  }
+  &:active {
+    // background: $btn-bg-hover;
+  }
+}
