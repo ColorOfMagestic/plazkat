@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   font-size: size(14);
-  color: $grey;
+  color: rgba($color: $grey, $alpha: 0.7);
   text-transform: uppercase;
   // border: 1px solid $color-primary;
   @media (pointer: fine) {

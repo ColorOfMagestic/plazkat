@@ -2,7 +2,8 @@
   position: relative;
   display: block;
   font-size: size(14);
-  color: $grey;
+  font-weight: 600;
+  color: rgba($color: $grey, $alpha: 0.7);
   text-transform: uppercase;
 
   //   padding: size(30);

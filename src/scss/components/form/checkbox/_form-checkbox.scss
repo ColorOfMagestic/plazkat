@@ -10,6 +10,9 @@ $checkbox-color: $grey-light;
   position: relative;
   flex: 0 0 auto;
   font-size: size(10);
+  font-weight: 600;
+  color: rgba($color: $grey, $alpha: 0.7);
+
   @include media(lg) {
     font-size: size(14);
   }
