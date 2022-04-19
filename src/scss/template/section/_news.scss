@@ -1,5 +1,65 @@
-.news { 
-    position: relative;   
-    border-top: 1px solid red;
-    min-height: 100vh;
+.news {
+  padding: size(50) 0;
+  @include media(lg) {
+    padding: size(120) 0;
+  }
+  &__content {
+    margin-top: size(35);
+    @include media(lg) {
+      margin-top: size(70);
+    }
+    &-card {
+      border: 1px solid $grey-light;
+      img {
+        margin: 0 auto;
+      }
+      &__subtitle {
+        margin-top: size(30);
+        padding: 0 size(16);
+      }
+      &__text {
+        padding: size(12) size(16) 0;
+      }
+
+      &__info {
+        padding: size(24) size(16) size(32);
+        &-date {
+          text-transform: uppercase;
+          font-size: size(14);
+          font-weight: 600;
+          color: rgba($color: $grey, $alpha: 0.7);
+        }
+        &-link {
+          position: relative;
+          margin-left: auto;
+          font-weight: 500;
+          color: $green;
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            content: "";
+            width: 100%;
+            height: size(1);
+            background-color: $green;
+            transition: 0.8s;
+          }
+          &:hover {
+            &::after {
+              left: 30%;
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+    .btn--link {
+      margin: 0 auto;
+      margin-top: size(30);
+      @include media(lg) {
+        width: 30%;
+      }
+    }
+  }
 }
