@@ -1,5 +1,101 @@
 <section id="application" class="application">
-    <div class="container">
-        <h2 class="application__title title title--size-"></h2>
+  <div class="container">
+    <div class="application__wrapper box-y">
+      <div class="application__wrapper-info">
+        <h2 class="application__wrapper-info__title title title--size-md">
+          Оставьте заявку на подбор системы Plazkat или свяжитесь с нами сами
+        </h2>
+        <div class="application__wrapper-info__content">
+          <div class="application__wrapper-info__content-item">
+            <p class="text__size-lg">Телефон:</p>
+            <a class="title--size-sm" href="tel:+37255500000"
+              >+372 555 000 00</a
+            >
+          </div>
+          <div class="application__wrapper-info__content-item">
+            <p class="text__size-lg">E-mail:</p>
+            <a class="title--size-sm" href="mailto:market@plazkat.ru"
+              >market@plazkat.ru</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="application__wrapper-form">
+        <form id="application__form" class="form js-form">
+          <input
+            class="form-input-title"
+            type="hidden"
+            name="form-title"
+            value=""
+          />
+
+          <div class="form-send">
+            <div class="form-send__message">
+              <div class="form-send__loading"><span></span></div>
+              <p class="form-send__success">
+                Спасибо, ваша заявка принята. Менеджер свяжется с вами в
+                ближайшее время
+              </p>
+              <p class="form-send__error">
+                Что-то пошло не так. Заявка не отправлена.
+              </p>
+            </div>
+            <div class="box-y">
+              <label class="form-field">
+                Имя
+                <input
+                  class="form-field__input"
+                  placeholder="text"
+                  type="text"
+                  name="name"
+                />
+              </label>
+              <label class="form-field">
+                Телефон
+                <input
+                  class="form-field__input form-phone"
+                  placeholder="phone"
+                  type="tel"
+                  name="phone"
+                />
+              </label>
+              <label class="form-field">
+                *E-mail
+                <input
+                  class="form-field__input"
+                  placeholder="email"
+                  type="email"
+                  name="email"
+                  required
+                />
+              </label>
+              <label class="form-textarea">
+                *сообщение для нас
+                <textarea
+                  class="form-textarea__input"
+                  name="textarea"
+                  required
+                ></textarea>
+              </label>
+              <span class="form-checkbox">
+                <input class="form-checkbox__input" type="checkbox" required />
+
+                <span class="form-checkbox__decor"></span>
+                Я согласен с
+                <a href="#"
+                  >Условиями использования и Политикой конфиденциальности</a
+                >
+              </span>
+            </div>
+            <button
+              type="submit"
+              class="form-send__btn btn btn--primary btn--size-md"
+            >
+              Отправить заявку
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </section>

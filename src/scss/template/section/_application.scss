@@ -1,5 +1,95 @@
-.application { 
-    position: relative;   
-    border-top: 1px solid red;
-    min-height: 100vh;
+.application {
+  padding: size(50) 0;
+  @include media(lg) {
+    padding: size(100) 0;
+  }
+  background-color: $grey-light;
+
+  &__wrapper {
+    @include media(md) {
+      flex-flow: row nowrap;
+    }
+    &-info {
+      @include media(md) {
+        flex-basis: 50%;
+        margin-right: size(60);
+      }
+      &__content {
+        position: relative;
+        margin-top: size(40);
+        @include media(md) {
+          margin-top: size(138);
+
+          &::before {
+            position: absolute;
+            top: size(-72);
+            left: size(-25);
+            display: block;
+            width: 335px;
+            height: 276px;
+            content: url(../images/application/border_BG.png);
+          }
+        }
+        @include media(lg) {
+          &::before {
+            position: absolute;
+            top: size(-72);
+            left: size(0);
+            display: block;
+            width: 335px;
+            height: 276px;
+            content: url(../images/application/border_BG.png);
+          }
+        }
+        &-item {
+          padding: 0 size(30);
+          @include media(lg) {
+            padding-left: size(60);
+          }
+          a {
+            color: $blue;
+          }
+        }
+      }
+    }
+    &-form {
+      margin-top: size(30);
+      @include media(md) {
+        margin-top: 0;
+      }
+      .form-field {
+        &__input {
+          margin: size(8) 0 size(20);
+          background-color: $white;
+        }
+      }
+      .form-textarea {
+        &__input {
+          height: size(120);
+          margin: size(8) 0 size(20);
+          background-color: $white;
+        }
+      }
+      .form-checkbox {
+        padding-left: size(32);
+        &__decor {
+          top: size(3);
+          left: 0;
+        }
+        a {
+          position: relative;
+          z-index: 5;
+
+          color: $green;
+        }
+      }
+      .form-send__btn {
+        margin-top: size(30);
+        @include media(lg) {
+          width: 45%;
+          margin-left: auto;
+        }
+      }
+    }
+  }
 }
