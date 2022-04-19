@@ -9,14 +9,14 @@
   // border: 1px solid $color-primary;
   @media (pointer: fine) {
     &:hover {
-      color: $grey;
+      color: rgba($color: $grey, $alpha: 0.7);
     }
     &:active {
-      color: $grey;
+      color: rgba($color: $grey, $alpha: 0.7);
     }
   }
   &:active {
-    color: $grey;
+    color: rgba($color: $grey, $alpha: 0.7);
   }
   //*
   &__input {

@@ -16,10 +16,11 @@ $checkbox-color: $grey-light;
   @include media(lg) {
     font-size: size(14);
   }
+  display: block;
   //   align-items: flex-start;
   //   justify-content: center;
   text-transform: uppercase;
-  color: $grey;
+  color: rgba($color: $grey, $alpha: 0.7);
   &__input {
     position: absolute;
     top: 0;

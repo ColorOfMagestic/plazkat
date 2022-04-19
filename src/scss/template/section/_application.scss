@@ -19,17 +19,18 @@
         margin-top: size(40);
         @include media(md) {
           margin-top: size(138);
-
           &::before {
             position: absolute;
+            z-index: 0;
             top: size(-72);
-            left: size(-25);
+            left: size(-35);
             display: block;
             width: 335px;
             height: 276px;
             content: url(../images/application/border_BG.png);
           }
         }
+
         @include media(lg) {
           &::before {
             position: absolute;
@@ -41,12 +42,17 @@
             content: url(../images/application/border_BG.png);
           }
         }
+
         &-item {
           padding: 0 size(30);
           @include media(lg) {
             padding-left: size(60);
           }
           a {
+            position: relative;
+            z-index: 3;
+
+            font-family: $font-secondary;
             color: $blue;
           }
         }
@@ -57,8 +63,18 @@
       @include media(md) {
         margin-top: 0;
       }
+      .box-y {
+        @include media(lg) {
+          flex-direction: row;
+        }
+      }
       .form-field {
         font-weight: 600;
+        @include media(lg) {
+          &:nth-child(1) {
+            margin-right: size(20);
+          }
+        }
         &__input {
           margin: size(8) 0 size(20);
           background-color: $white;
