@@ -1,3 +1,133 @@
 .footer {
-  
+  padding-top: size(40);
+  margin-top: size(30);
+  @include media(lg) {
+    padding-top: size(100);
+    margin-top: size(100);
+  }
+
+  background-color: $grey-dark;
+  &__header {
+    @include media(md) {
+      flex-flow: row nowrap;
+    }
+    &-logo {
+      width: 40%;
+    }
+    &__form {
+      margin-top: size(30);
+      @include media(md) {
+        margin-top: 0;
+        margin-left: auto;
+        flex-basis: 48%;
+      }
+      p {
+        color: $white;
+        font-size: size(14);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        @include media(lg) {
+          margin-bottom: size(8);
+          text-align: left;
+        }
+      }
+      .box-y {
+        @include media(lg) {
+          flex-direction: row;
+        }
+      }
+      .form-field {
+        margin: size(20) 0;
+        @include media(lg) {
+          margin: 0;
+        }
+        &__input {
+          padding: size(19) size(30);
+          border: 1px solid $white;
+          color: rgba($color: $grey-light, $alpha: 0.7);
+          &::placeholder {
+            opacity: 1;
+          }
+
+          @include media(lg) {
+            border-right: none;
+            border-radius: size(4) 0 0 size(4);
+          }
+        }
+      }
+      .form-send__btn {
+        @include media(lg) {
+          width: 50%;
+          border-radius: 0 size(4) size(4) 0;
+        }
+      }
+    }
+  }
+  &__content {
+    padding: size(30) 0;
+    margin-top: size(40);
+    @include media(md) {
+      flex-direction: row;
+    }
+    @include media(lg) {
+      padding: size(60) 0 size(72);
+      margin-top: size(80);
+    }
+    border-top: 1px solid rgba($color: $grey, $alpha: 0.6);
+    border-bottom: 1px solid rgba($color: $grey, $alpha: 0.6);
+    color: $white;
+
+    &-item {
+      margin-bottom: size(20);
+      @include media(md) {
+        margin-bottom: size(0);
+      }
+      @include media(lg) {
+        &:nth-child(2) {
+          margin-left: auto;
+        }
+        &:nth-child(3) {
+          margin-left: size(63);
+        }
+      }
+      &__title {
+        font-weight: 600;
+        color: rgba($color: $grey-light, $alpha: 0.7);
+        text-transform: uppercase;
+      }
+      .blue {
+        color: $blue;
+      }
+      &__list {
+        margin-top: size(12);
+        &-item {
+          &:not(:last-child) {
+            padding: size(10) 0;
+          }
+          @include media(md) {
+            &:not(:last-child) {
+              padding: 0;
+            }
+          }
+          a {
+            color: $white;
+            &:hover {
+              color: rgba($color: $grey-light, $alpha: 0.8);
+            }
+          }
+        }
+      }
+      .list--disc {
+        padding-left: size(10);
+        list-style-type: disc;
+      }
+    }
+  }
+  &__copyright {
+    padding: size(20) 0;
+    font-size: size(12);
+    color: $grey;
+  }
 }
