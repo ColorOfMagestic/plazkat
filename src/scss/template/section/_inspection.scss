@@ -51,7 +51,7 @@
         border-bottom: 1px solid $grey-light;
       }
       &__wrapper {
-        @include media(lg) {
+        @include media(md) {
           display: flex;
           flex-flow: row wrap;
         }
@@ -71,11 +71,14 @@
             width: size(40);
             height: 100%;
           }
-          @include media(lg) {
-            width: 46.15%;
+          @include media(md) {
+            width: 48%;
             &:nth-child(even) {
               margin-left: auto;
             }
+          }
+          @include media(lg) {
+            width: 46.15%;
           }
         }
 

@@ -5,3 +5,4 @@
 // @@include("news.js",{}) 
 // @@include("questions.js",{}) 
 @@include("inspection.js",{}) 
+@@include("inspection_oil.js",{}) 
