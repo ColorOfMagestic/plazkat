@@ -1,5 +1,119 @@
-.inspection { 
-    position: relative;   
-    border-top: 1px solid red;
-    min-height: 100vh;
+.inspection {
+  position: relative;
+  padding-top: size(50);
+  @include media(lg) {
+    padding-top: size(120);
+  }
+  .box-y {
+    @include media(lg) {
+      flex-direction: row;
+      .inspection__title {
+        width: 40%;
+        margin-right: size(68);
+      }
+    }
+  }
+  &__content {
+    @include media(lg) {
+      width: 65%;
+    }
+    ol {
+      padding-left: size(20);
+    }
+    &__title {
+      margin-top: size(25);
+      margin-bottom: size(15);
+      color: $grey;
+      @include media(lg) {
+        margin-top: size(50);
+        margin-bottom: size(24);
+      }
+    }
+    &-case {
+      &__title {
+        margin-top: size(25);
+        @include media(lg) {
+          margin-top: size(0);
+        }
+      }
+    }
+    &-checklist {
+      .inspection__content__title {
+        @include media(lg) {
+          margin-top: 0;
+        }
+      }
+      @include media(lg) {
+        padding: size(50) 0;
+        margin-top: size(50);
+
+        border-top: 1px solid $grey-light;
+        border-bottom: 1px solid $grey-light;
+      }
+      &__wrapper {
+        @include media(lg) {
+          display: flex;
+          flex-flow: row wrap;
+        }
+        &-item {
+          position: relative;
+          padding-left: size(53);
+          &:not(:last-child) {
+            margin-bottom: size(16);
+          }
+          &::before {
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            content: url(../images/inspection/01.svg);
+            width: size(40);
+            height: 100%;
+          }
+          @include media(lg) {
+            width: 46.15%;
+            &:nth-child(even) {
+              margin-left: auto;
+            }
+          }
+        }
+
+        .two {
+          &::before {
+            content: url(../images/inspection/02.svg);
+          }
+        }
+        .three {
+          &::before {
+            content: url(../images/inspection/03.svg);
+          }
+        }
+        .four {
+          &::before {
+            content: url(../images/inspection/04.svg);
+          }
+        }
+        .five {
+          &::before {
+            content: url(../images/inspection/05.svg);
+          }
+        }
+      }
+    }
+    &-result {
+      &__list {
+        &-item {
+          font-weight: 600;
+          ul {
+            list-style: disc;
+            li {
+              margin-left: size(15);
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
 }
