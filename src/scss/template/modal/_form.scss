@@ -1,29 +1,63 @@
 .modal-form {
+  position: relative;
+  background-color: #fff;
+  @include media(lg) {
+    background-color: transparent;
+  }
+  &__box {
+    margin: auto;
     position: relative;
-    background-color: #fff; 
+    padding: 0;
+  }
+  &__wrapper {
+    background-color: #fff;
+    max-width: size(600);
+    padding: size(50) size(15);
     @include media(lg) {
-        background-color: transparent;
+      padding: size(50) size(75);
     }
-    &__box {
-        margin: auto;
-        position: relative;
-        padding: 0;
-    }
-    &__wrapper {
-        background-color: #fff;
-        max-width: size(600);
-        padding: size(50) size(15);
-        @include media(lg) {
-            padding: size(50) size(75);
-        }
-    }
-    &__close {
-        position: absolute;
-        right: size(15);
-        top: size(30);
 
-        @include media(lg) {
-            right: size(30);
-        }
+    .form-field {
+      font-weight: 600;
+      &__input {
+        margin: size(8) 0 size(20);
+        border: 1px solid $grey-dark;
+      }
     }
+    .form-textarea {
+      &__input {
+        height: size(120);
+        margin: size(8) 0 size(20);
+        border: 1px solid $grey-dark;
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    right: size(15);
+    top: size(30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: size(30);
+    height: size(30);
+
+    span {
+      position: absolute;
+      display: flex;
+      width: size(25);
+      height: size(2);
+      background-color: $grey-dark;
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+
+    @include media(lg) {
+      right: size(30);
+    }
+  }
 }

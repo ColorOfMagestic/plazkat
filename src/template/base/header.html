@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <button
+      <button data-modal-open="modal-form" 
         class="header__btn btn btn--primary btn--size-md item m:hide m:show@lg"
       >
         Задать вопрос
@@ -109,7 +109,7 @@
 
       <nav class="header_nav--mobile">
         
-          <div class="header_nav--mobile__header box">
+          <div class="header_nav--mobile__header box-center">
               <img src="images/global/logo.svg" alt=""/>
               <button class="header_nav--mobile__header-close box-center">
                   <span></span>
@@ -196,7 +196,7 @@
                 </select>
               </div>
             </div>
-            <button class="btn btn--primary btn--size-md">
+            <button data-modal-open="modal-form" class="btn btn--primary btn--size-md">
               Задать вопрос
             </button>
     </nav>
@@ -206,13 +206,7 @@
 
   <div class="header__intro">
     <div class="container">
-      <h1 class="header__intro__title title title--size-lg">
-        Системы очистки на различных производственных процессах
-      </h1>
-      <p class="header__intro__text text__size-lg">
-        Гарантируем эффективность очистки не менее 95%,<br />
-        есть возможность провести пилотные испытания на Вашем предприятии
-      </p>
+      @@include("../menu/breadcrumbs.html",{})
     </div>
   </div>
 </header>
