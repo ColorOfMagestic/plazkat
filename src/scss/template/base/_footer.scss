@@ -1,9 +1,7 @@
 .footer {
   padding-top: size(40);
-  margin-top: size(30);
   @include media(lg) {
     padding-top: size(100);
-    margin-top: size(100);
   }
 
   background-color: $grey-dark;

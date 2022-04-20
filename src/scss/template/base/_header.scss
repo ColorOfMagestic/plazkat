@@ -1,6 +1,7 @@
 .header {
   background-image: url(../images/global/header_BG.jpg);
   background-size: cover;
+  background-position-y: center;
   &__wrapper {
     padding: size(10);
     @include media(lg) {
@@ -153,6 +154,7 @@
           display: none;
           width: size(200);
           background-color: $grey-light;
+          border: 1px solid $grey-dark;
           border-radius: 4px;
           z-index: 2;
           @include media(lg) {
@@ -178,6 +180,8 @@
               display: none;
               width: size(200);
               background-color: $grey-light;
+              border: 1px solid $grey-dark;
+
               border-radius: 4px;
               z-index: 2;
 
@@ -233,6 +237,9 @@
       transform: translateX(-110%);
       transition: 0.8s linear;
       &__header {
+        img {
+          width: 30%;
+        }
         &-close {
           position: relative;
           width: 40px;
@@ -396,14 +403,12 @@
   }
   &__intro {
     color: $white;
-    padding-top: size(60);
-    padding-bottom: size(105);
+    padding: size(20) 0;
     text-align: center;
     @include media(lg) {
       text-align: left;
-
-      padding-top: size(185);
-      padding-bottom: size(325);
+      padding-top: size(40);
+      padding-bottom: size(28);
     }
     &__title {
       position: relative;
