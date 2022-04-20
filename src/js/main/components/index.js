@@ -6,3 +6,5 @@
 @@include("quiz/index.js",{})
 
 @@include("slider/index.js",{})
+
+@@include("menu/index.js",{})
